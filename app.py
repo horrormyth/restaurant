@@ -1,14 +1,9 @@
 import datetime
 import json
 import logging
-import os
 from future_builtins import zip
 
-SORT_ORDER = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
-
-SRC_DIR = os.path.abspath(os.path.dirname(__file__))
-DATA_DIR = os.path.join(SRC_DIR, 'data')
-FILENAME = os.path.join(DATA_DIR, 'data.json')
+from constants import FILENAME, SORT_ORDER
 
 
 def load_json_file(path):
