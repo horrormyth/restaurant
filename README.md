@@ -28,7 +28,8 @@ Dependencies
 -   Run App
 -   ``` python app.py ```
 
-
+### Running Test
+``` python tests.py ```
 
 
 
