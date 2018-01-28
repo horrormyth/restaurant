@@ -43,6 +43,17 @@ Very generic rest api (Nothing fancy here) but working
 
 ``` python api.py ```    
 
+
+Endpoints:
+
+| Description                             | Endpoint                                    | parameter Type   | Request | Payload |
+|-----------------------------------------|------------------------------------------|--------|-----|--- |
+|Get all Restaurant timetable | /api/restaurant/ | None| GET | None |
+|Get specific restaurant timetable | /api/restaurant/ | name -- Restaurant name| GET | None |
+|Get specific day timetable for a restaurant | /api/restaurant/<name>/< weekday > | None | GET | None |
+|Add/Update timetable for specific day of a restaruant| /api/restaurant/<name>/< weekday > | name, weekday -- restaurant name, weekday| POST |e.g{'type':'open','value':3600'} |
+|Remove specific working day timetable of a restaurant| /api/restaurant/< name > / | name, weekday -- restaurant name| DELETE |e.g{'weekday':'sunday'} |
+
 ### Run Test
 Test is only for app not for the api
 
