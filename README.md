@@ -14,10 +14,8 @@ A simple python module to show the restraurant time table in follwoing manner, g
 Dependencies
 -------------
 -   Python >= 2.7
--   Packages
-    -   mock==2.0.0
 
-## Instruction
+# Instruction
 -   Clone the repo
 -   Create virtualenv in the cloned project folder and name it :``` env ``` as below
 -   ``` virtualenv env ```
@@ -25,17 +23,28 @@ Dependencies
 -   ``` source env/bin/activate```
 -   Install the dependencies
 -   ``` pip install -r requirements.txt```
--   Run App
--   ``` python app.py ```
+- 
 
-### Running Test
+## Set Config variable !!
+export APP_SETTINGS="config.DevelopmentConfig" or any one in the config file.
+
+
+## Run App 
+######Main application that displays the above result
+``` python app.py ```
+
+## Run api
+######Very generic rest api (Nothing fancy here) but working 
+``` python api.py ```    
+
+### Runing Test
+######Test is only for app not for the api
 ``` python tests.py ```
 
 
 
-
-
-
+### Note 
+Logging is configured properly only for restapi i.e api.py.For app.py logging is just the default one.
 
 
 

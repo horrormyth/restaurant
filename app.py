@@ -1,14 +1,11 @@
 import datetime
 import json
 import logging
-import os
 from future_builtins import zip
 
-SORT_ORDER = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+from constants import FILENAME, SORT_ORDER
 
-SRC_DIR = os.path.abspath(os.path.dirname(__file__))
-DATA_DIR = os.path.join(SRC_DIR, 'data')
-FILENAME = os.path.join(DATA_DIR, 'data.json')
+logger = logging.getLogger(__name__)
 
 
 def load_json_file(path):
@@ -124,7 +121,7 @@ def process_hours(data_dict=None):
                 hour = hours.get('value', None)
                 hour = format_time(hour)
                 working_time.append('%s' % hour)
-            # Utilizing working_time here again !! makes the multiple working hour a pair
+            # makes the multiple working hour a pair
             working_time = [
                 ('{} - {}'.format(opening_hour, closing_hour))
                 for opening_hour, closing_hour in pairwise(working_time)
