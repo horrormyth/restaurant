@@ -4,6 +4,7 @@ import logging
 from future_builtins import zip
 
 from constants import FILENAME, SORT_ORDER
+
 logger = logging.getLogger(__name__)
 
 
@@ -18,7 +19,7 @@ def load_json_file(path):
             json_data = json.load(file_name)
             return json_data
         except AttributeError as e:
-            logger.exception(e)
+            logging.exception(e)
             return None
 
 
@@ -36,7 +37,7 @@ def get_business_hours():
         raw_hour_data = load_json_file(FILENAME)
         # print raw_hour_data
     except IOError as error:
-        logger.exception(error)
+        logging.exception(error)
         return {'success': False, 'message': 'File not found'}
     if raw_hour_data:
         unsorted_hours = process_hours(raw_hour_data)
@@ -61,7 +62,7 @@ def format_time(seconds=None):
     try:
         hour = datetime.datetime.utcfromtimestamp(seconds)
     except (ValueError, TypeError) as error:
-        logger.exception(error)
+        logging.exception(error)
         return None
     formatted_time = hour.strftime("%I:%M %p")
     if not hour.minute:
@@ -138,6 +139,6 @@ if __name__ == '__main__':
             for hour in hours:
                 print hour
         except AttributeError as e:
-            logger.exception(e)
+            logging.exception(e)
     else:
         print(business_hour.get('message', 'Something Horribly Went Wrong Contact Support'))
