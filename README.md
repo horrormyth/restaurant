@@ -30,15 +30,15 @@ export APP_SETTINGS="config.DevelopmentConfig" or any one in the config file.
 
 
 ## Run App 
-######Main application that displays the above result
+Main application that displays the above result
 ``` python app.py ```
 
 ## Run api
-######Very generic rest api (Nothing fancy here) but working 
+Very generic rest api (Nothing fancy here) but working 
 ``` python api.py ```    
 
 ### Runing Test
-######Test is only for app not for the api
+Test is only for app not for the api
 ``` python tests.py ```
 
 
