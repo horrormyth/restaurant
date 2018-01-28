@@ -52,7 +52,7 @@ Endpoints:
 |Get specific restaurant timetable | /api/restaurant/ | name -- Restaurant name| GET | None |
 |Get specific day timetable for a restaurant | /api/restaurant/<name>/< weekday > | None | GET | None |
 |Add/Update timetable for specific day of a restaruant| /api/restaurant/<name>/< weekday > | name, weekday -- restaurant name, weekday| POST |e.g{'type':'open','value':3600'} |
-|Remove specific working day timetable of a restaurant| /api/restaurant/< name > / | name, weekday -- restaurant name| DELETE |e.g{'weekday':'sunday'} |
+|Remove specific working day timetable of a restaurant| /api/restaurant/< name > / | name -- restaurant name| DELETE |e.g{'weekday':'sunday'} |
 
 ### Run Test
 Test is only for app not for the api
@@ -63,6 +63,8 @@ Test is only for app not for the api
 
 ### Note 
 Logging is configured properly only for restapi i.e api.py.For app.py logging is just the default one.
+
+#### Django Rest Framework would have been the best option for the API.
 
 
 
