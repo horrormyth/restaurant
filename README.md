@@ -9,9 +9,11 @@ A simple python module to show the restraurant time table in follwoing manner, g
     Friday: Closed
     Saturday: 10 AM - 8 PM
     Sunday: 12 PM - 9 PM, 11:56 AM - 6 PM
+    
+## Run app.py to see the result
 
 ----------
-Dependencies
+Required
 -------------
 -   Python >= 2.7
 
@@ -23,7 +25,6 @@ Dependencies
 -   ``` source env/bin/activate```
 -   Install the dependencies
 -   ``` pip install -r requirements.txt```
-- 
 
 ## Set Config variable !!
 Available Configs
@@ -34,12 +35,12 @@ Set it to environnment variable
 
 
 ## Run App 
-Main application that displays the above result
+Main application that displays the required result
 
 ``` python app.py ```
 
 ## Run api
-Very generic rest api (Nothing fancy here) but working 
+Very generic rest api (Nothing fancy here) but working, This does not display as the app.py does.
 
 ``` python api.py ```    
 
