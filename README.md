@@ -26,19 +26,26 @@ Dependencies
 - 
 
 ## Set Config variable !!
-export APP_SETTINGS="config.DevelopmentConfig" or any one in the config file.
+Available Configs
+``` DevelopmentConfig, ProductionConfig, Test Config```
+Set it to environnment variable
+
+``` export APP_SETTINGS="config.DevelopmentConfig" ```
 
 
 ## Run App 
 Main application that displays the above result
+
 ``` python app.py ```
 
 ## Run api
 Very generic rest api (Nothing fancy here) but working 
+
 ``` python api.py ```    
 
-### Runing Test
+### Run Test
 Test is only for app not for the api
+
 ``` python tests.py ```
 
 
