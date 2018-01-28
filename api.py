@@ -1,8 +1,8 @@
 import copy
 import logging
+import os
 from logging.handlers import RotatingFileHandler
 
-import os
 from flask import Flask, jsonify, request
 from jsonschema import validate
 from jsonschema.exceptions import ValidationError
@@ -11,10 +11,8 @@ from app import load_json_file
 from constants import FILENAME
 
 logger = logging.getLogger(__name__)
-
 app = Flask(__name__)
-# app.config.from_object(os.environ['APP_SETTINGS'])
-
+app.config.from_object(os.environ['APP_SETTINGS'])
 
 restaurant_hours = {}
 data = load_json_file(path=FILENAME)
@@ -139,7 +137,6 @@ def delete_time_table(name):
 
 
 if __name__ == '__main__':
-
     formatter = logging.Formatter(
         "[%(asctime)s] {%(pathname)s:%(lineno)d} %(levelname)s - %(message)s")
     handler = RotatingFileHandler('api_logs.log', maxBytes=10000, backupCount=1)
